@@ -20,7 +20,6 @@ int findTrailingZeroes(int n) {
 int main() {
   int T;
   scanf("%u", &T);
-  int arr[T];
 
   for (auto i = 0; i < T; i++) {
     int n;
