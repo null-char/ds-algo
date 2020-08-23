@@ -20,15 +20,15 @@ def insertion_sort(arr):
 
 print(insertion_sort([10, 7, 3, 6]))
 
-# A quick proof using loop invariants:
+# A quick proof using loop invariants (this is essentially just mathematical induction):
 # We will only consider the outer for loop for the loop invariant.
 # Initially, we have a subarray arr[0..1] which is obviously sorted since it consists of only
 # one element. Notice that if this invariant holds true before an iteration and before the next
 # iteration, we can effectively prove that the algorithm is correct.
-# We can assume that before each iteration, arr[1..j] is sorted. Before the next iteration, we then
+# We can assume that before an iteration, arr[0..j] is sorted. Before the next iteration, we then
 # appropriately place the key (arr[i]) into it's appropriate position, thus the invariant
 # still holds true.
 # Now, once the loop terminates, we have i = n + 1 (where n is the length of arr). We know from our
-# previous assumption that arr[1..j] is sorted. Hence we simply substitute for j and we have thus proven
+# previous assumption that arr[0..j] is sorted. Hence we simply substitute for j and we have thus proven
 # that arr[1..n] is sorted. Since this "subarray" represents the entire array, we conclude that
 # the algorithm has correctly sorted the entire array.
